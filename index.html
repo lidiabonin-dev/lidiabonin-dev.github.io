@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>Lídia Bonim — Portfólio Front-end</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="bar"></div>
+<nav id="nav"><a class="logo" href="#sobre">LB<em>.</em></a><div class="links"><a href="#sobre">Sobre</a><a href="#competencias">Competências</a><a href="#jornada">Jornada</a><a href="#fora">Fora do trabalho</a><a href="#contato">Contato</a></div><button id="th" aria-label="Alternar tema">◐</button></nav>
+<div class="w">
+
+<section class="hero" id="sobre"><canvas id="bg" aria-hidden="true"></canvas>
+<div>
+<p class="eb">01 — Sobre mim</p>
+<h1>Olá, eu sou <em>Lídia Bonim.</em></h1>
+<p class="role">Eu curto <span id="typed"></span><span class="caret">|</span></p>
+<p class="lead">Sou uma pessoa <strong>curiosa, observadora e movida pela vontade de aprender.</strong> Gosto de entender como as coisas funcionam, encontrar soluções e, principalmente, descobrir novas possibilidades no caminho.</p>
+<p class="lead">A tecnologia entrou na minha vida como uma área de conhecimento, mas acabou se tornando também uma forma de <strong>expressar minha criatividade, resolver problemas e conectar pessoas e ideias.</strong> Sou apaixonada por criar, aprender e transformar aquilo que parece complicado em algo mais simples.</p>
+<p class="lead">Antes de qualquer profissão, existe uma pessoa aqui: alguém que valoriza a <strong>simplicidade, a criatividade, o contato com pessoas, a natureza e os pequenos detalhes</strong> que tornam cada caminho único.</p>
+<p class="lead">Este espaço é um pouco sobre tudo isso — <strong>não apenas sobre o que eu faço, mas sobre quem eu sou enquanto faço.</strong></p>
+<div class="cta"><a class="btn p" href="#competencias">Ver competências</a><a class="btn" href="#contato">Falar comigo</a></div>
+</div>
+<div class="code" aria-label="Resumo em código"><div class="dots"><i></i><i></i><i></i><span>lidia.js</span></div>
+<pre><code><span class="k">const</span> <span class="v">lidia</span> = {
+  <span class="p">foco</span>: <span class="s">"front-end"</span>,
+  <span class="p">stack</span>: [<span class="s">"HTML"</span>, <span class="s">"CSS"</span>, <span class="s">"JavaScript"</span>],
+  <span class="p">base</span>: <span class="s">"infra, redes e suporte"</span>,
+  <span class="p">valores</span>: [<span class="s">"simplicidade"</span>,
+            <span class="s">"criatividade"</span>, <span class="s">"pessoas"</span>],
+  <span class="p">aprendendo</span>: <span class="k">true</span>
+};</code></pre></div>
+</section>
+
+
+<section>
+<p class="eb">02 — Essência</p>
+<h2>Curiosidade, criatividade <em>e propósito.</em></h2>
+<p class="lead">Acredito que tecnologia boa nasce da escuta: entender as pessoas, simplificar o que é complexo e criar algo que faça sentido para quem está do outro lado.</p>
+<div class="cards">
+<div class="card"><div class="tag">Diferencial</div><h3>Entender antes de resolver</h3><p>Gosto de conhecer o contexto, ouvir as pessoas e compreender o problema antes de pensar em uma solução.</p></div>
+<div class="card"><div class="tag">Diferencial</div><h3>Conectar ideias</h3><p>A tecnologia, para mim, não existe isoladamente. Gosto de aproximar pessoas, ideias e diferentes áreas para encontrar caminhos mais simples e criativos.</p></div>
+<div class="card"><div class="tag">Diferencial</div><h3>Criar e evoluir</h3><p>Cada projeto é uma oportunidade de experimentar, aprender e transformar uma ideia em algo que realmente faça sentido.</p></div>
+</div>
+</section>
+
+<section id="competencias">
+<p class="eb">03 — Competências</p>
+<h2>HTML, CSS e JavaScript <em>em ação.</em></h2>
+<p class="lead">Esta página é a própria demonstração: estrutura em <strong>HTML</strong>, visual em <strong>CSS</strong> e interações em <strong>JavaScript</strong>. Tudo feito à mão, sem frameworks.</p>
+<div class="trio">
+<div class="card sk"><div class="tag">&lt;/&gt; HTML</div><h3>Estrutura</h3><p>Marcação semântica e acessível: seções, navegação, formulários e atributos ARIA.</p><div class="meter"><b data-v="85"></b></div><small>85%</small></div>
+<div class="card sk"><div class="tag">{ } CSS</div><h3>Visual</h3><p>Grid, flexbox, variáveis, animações, temas claro/escuro e layout responsivo.</p><div class="meter"><b data-v="80"></b></div><small>80%</small></div>
+<div class="card sk"><div class="tag">( ) JavaScript</div><h3>Interação</h3><p>DOM, eventos, observers e canvas para dar vida ao que foi construído.</p><div class="meter"><b data-v="70"></b></div><small>70%</small></div>
+</div>
+<div class="card demo"><div><div class="tag">Demo ao vivo</div><h3>Escolha a cor do site</h3><p>Um clique em JS altera uma variável CSS e o site inteiro responde.</p></div><div class="sw" id="sw"><button style="--c:#D4AE8B" aria-label="Areia"></button><button style="--c:#8FB7A3" aria-label="Sálvia"></button><button style="--c:#9DB4E8" aria-label="Azul"></button><button style="--c:#E39AAE" aria-label="Rosa"></button><button style="--c:#C9A7EB" aria-label="Lilás"></button></div></div>
+<div class="stats"><div><strong data-n="3">0</strong><span>linguagens da web</span></div><div><strong data-n="8">0</strong><span>interesses além do código</span></div><div><strong data-n="100">0</strong><span>% curiosidade</span></div></div>
+</section>
+
+<section id="jornada">
+<p class="eb">04 — Minha jornada</p>
+<h2>Uma linha do tempo<br><em>que ainda está sendo escrita.</em></h2>
+<div class="tl" id="tl"><div class="fill" id="fill"></div>
+
+<div class="item l"><div class="card"><div class="tag"><span>📍</span>Início</div><h3>Tudo começou com curiosidade</h3><p>Minha trajetória começou na ETEC Professor Massuyuki Kawano, onde fiz o Ensino Médio integrado ao Técnico em Administração. Na época, eu imaginava que seguiria por esse caminho. Gostava de aprender, entender como as coisas funcionavam e descobrir novas possibilidades, mas ainda não sabia exatamente onde tudo isso me levaria.</p></div></div>
+
+<div class="item r"><div class="card"><div class="tag"><span>🎓</span>Uma nova escolha</div><h3>E então veio a tecnologia</h3><p>Depois de concluir o Ensino Médio, decidi continuar estudando e prestei novamente o processo seletivo da ETEC, para curso Técnico. Entre diferentes possibilidades, passei no curso Técnico em Informática para Internet, que estava começando na escola e acontecia no período noturno. Entrei pensando que seria apenas mais uma formação para continuar evoluindo. Foi quando comecei a descobrir que a tecnologia poderia ser muito mais do que eu imaginava.</p></div></div>
+
+<div class="item l"><div class="card"><div class="tag"><span>💻</span>Onde eu me encontrei</div><h3>Criar também é uma forma de pensar</h3><p>Durante o curso, percebi que sempre existiu em mim uma vontade muito grande de criar: imaginar ideias, pensar em layouts, experimentar possibilidades e transformar algo que estava apenas na minha cabeça em algo que pudesse existir. Foi no front-end que encontrei esse encontro entre criatividade, tecnologia e funcionalidade. Ali, percebi que poderia não apenas aprender tecnologia, mas também colocar parte de quem eu sou naquilo que construo.</p></div></div>
+
+<div class="item r"><div class="card"><div class="tag"><span>🛠️</span>O primeiro passo profissional</div><h3>Da sala de aula para a prática</h3><p>Depois de concluir o curso técnico, consegui meu primeiro trabalho na área de tecnologia e hoje atuo como Técnica em Informática. Minha atuação é muito voltada para infraestrutura, suporte, redes, equipamentos e resolução de problemas. Não é exatamente onde quero chegar, mas foi — e continua sendo — uma etapa muito importante da minha trajetória. Foi trabalhando que pude sair um pouco da teoria e entender, na prática, como a tecnologia funciona por trás de tudo: redes, infraestrutura, processos, automações, suporte e tantas outras coisas que ampliaram minha visão.</p></div></div>
+
+<div class="item l"><div class="card"><div class="tag"><span>🌱</span>O que essa fase me ensinou</div><h3>Evoluir também é passar por caminhos inesperados</h3><p>Nem todo caminho precisa ser o destino final para ter importância. Essa experiência me fez aprender muito, desenvolver autonomia, resolver problemas diferentes e enxergar a tecnologia de uma maneira mais ampla. Hoje consigo olhar para trás e reconhecer o quanto essa fase me fez crescer — mesmo sabendo que ainda existe muito caminho pela frente.</p></div></div>
+
+<div class="item r"><div class="card"><div class="tag"><span>✨</span>Hoje</div><h3>Ainda estou construindo meu lugar</h3><p>Minha história na tecnologia ainda está sendo desenvolvida. Continuo estudando, experimentando e tentando entender cada vez melhor onde minhas habilidades podem chegar. Quero me aproximar cada vez mais da parte da tecnologia que une criação, resolução de problemas, experiência e pessoas. Porque gosto de tecnologia, mas também gosto de gente. Gosto de entender necessidades, comunicar ideias, encontrar soluções e criar algo que realmente faça sentido para quem está do outro lado.</p></div></div>
+
+<div class="item l"><div class="card"><div class="tag"><span>🚀</span>Próximo capítulo</div><h3>Para onde quero ir</h3><p>Ainda não tenho todas as respostas — e talvez eu nem precise ter. Sei que quero continuar evoluindo até chegar mais perto daquilo que imagino para mim: uma tecnologia mais criativa, humana e conectada às pessoas. Porque acredito que a gente pode construir muita coisa sozinho. Mas não é sozinho que a gente realmente avança.</p></div></div>
+
+</div>
+</section>
+
+<section class="fora" id="fora">
+<p class="eb">05 — Fora do trabalho</p>
+<h2>O que me <em>faz bem.</em></h2>
+<p class="lead">Algumas coisas que fazem parte de quem eu sou além da tecnologia.<small>Toque para ver os detalhes →</small></p>
+<div class="pills">
+<div class="hobby-item"><input type="checkbox" name="hobby" id="leitura"><label for="leitura"><span>Leitura</span><small>+</small></label><div class="info-card"><span class="card-number">01</span><h3>Leitura</h3><p>Gosto de histórias que me fazem imaginar outros lugares, épocas e perspectivas. É uma forma de desacelerar e descobrir novos mundos.</p></div></div>
+<div class="hobby-item"><input type="checkbox" name="hobby" id="musica"><label for="musica"><span>Música</span><small>+</small></label><div class="info-card"><span class="card-number">02</span><h3>Música</h3><p>A música é uma das formas que encontro para sentir e criar. Gosto de escrever, descobrir melodias e aprender teclado.</p></div></div>
+<div class="hobby-item"><input type="checkbox" name="hobby" id="natureza"><label for="natureza"><span>Natureza</span><small>+</small></label><div class="info-card"><span class="card-number">03</span><h3>Natureza</h3><p>Plantas, flores e lugares tranquilos me ajudam a desacelerar. A natureza também é uma das minhas maiores fontes de inspiração.</p></div></div>
+<div class="hobby-item"><input type="checkbox" name="hobby" id="criatividade"><label for="criatividade"><span>Criatividade</span><small>+</small></label><div class="info-card"><span class="card-number">04</span><h3>Criatividade</h3><p>Gosto de transformar ideias em algo visual, funcional e diferente. Criar é uma das maneiras que encontro de me expressar.</p></div></div>
+<div class="hobby-item"><input type="checkbox" name="hobby" id="escrita"><label for="escrita"><span>Escrita</span><small>+</small></label><div class="info-card"><span class="card-number">05</span><h3>Escrita</h3><p>Escrevo histórias, músicas e pensamentos. Gosto de transformar sentimentos e ideias em palavras que tenham significado.</p></div></div>
+<div class="hobby-item"><input type="checkbox" name="hobby" id="fotografia"><label for="fotografia"><span>Fotografia</span><small>+</small></label><div class="info-card"><span class="card-number">06</span><h3>Fotografia</h3><p>Gosto de registrar detalhes, paisagens, arquiteturas e momentos que normalmente passariam despercebidos.</p></div></div>
+<div class="hobby-item"><input type="checkbox" name="hobby" id="viagens"><label for="viagens"><span>Viagens</span><small>+</small></label><div class="info-card"><span class="card-number">07</span><h3>Viagens</h3><p>Tenho vontade de conhecer novos lugares, culturas e pessoas. Viajar, para mim, também é uma forma de aprender.</p></div></div>
+<div class="hobby-item"><input type="checkbox" name="hobby" id="tecnologia"><label for="tecnologia"><span>Tecnologia</span><small>+</small></label><div class="info-card"><span class="card-number">08</span><h3>Tecnologia</h3><p>Gosto de entender como as coisas funcionam, resolver problemas e transformar ideias em algo real. Foi na tecnologia que encontrei uma forma de unir lógica e criatividade.</p></div></div>
+</div>
+</section>
+
+</div>
+
+<section class="ct" id="contato">
+<div class="w">
+<p class="eb">06 — Contato</p>
+<h2>Vamos <em>conversar?</em></h2>
+<p class="lead">Aberta a conexões, parcerias e novas oportunidades.</p>
+<div class="contact-box">
+<a class="contact-link p" href="https://www.linkedin.com/in/lídia-bonim-9717b738b" target="_blank" rel="noopener noreferrer">Conectar no LinkedIn</a>
+<span class="contact-divider">ou</span>
+<a class="contact-link s" href="mailto:lidia.bonim@hotmail.com">lidia.bonim@hotmail.com</a><button class="copy" id="cp">Copiar e-mail</button>
+</div>
+</div>
+</section>
+<section class="ded"><div class="w"><p class="eb">Dedicatória</p><blockquote><span class="q">“</span>A gente só sonha aquilo que é <em>capaz de alcançar.</em><small>Porque o sonho já carrega dentro de si o mapa, e cada passo, cada linha de código e cada pessoa que cruza o caminho nos aproximam dele. Basta começar, confiar e continuar.</small></blockquote><p class="sig">— Lídia Bonim</p></div></section>
+<footer>© 2026 Lídia Bonim</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
