@@ -19,7 +19,11 @@ document.querySelectorAll('.meter b').forEach(function(b){new IntersectionObserv
 document.querySelectorAll('[data-n]').forEach(function(n){new IntersectionObserver(function(es,o){if(!es[0].isIntersecting)return;o.disconnect();var t=+n.dataset.n,s=performance.now();(function f(now){var p=Math.min(1,(now-s)/1400);n.textContent=Math.round(t*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)})(s)},{threshold:.6}).observe(n)});
 var rvo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');rvo.unobserve(e.target)}})},{threshold:.15});
 document.querySelectorAll('.cards .card,.trio .card,.demo,.stats,section>.lead,section>h2,.ded blockquote,.ded .sig').forEach(function(x){x.classList.add('rv');rvo.observe(x)});
-var sw=document.querySelectorAll('#sw button');sw.forEach(function(b){b.onclick=function(){var c=b.style.getPropertyValue('--c');R.style.setProperty('--acc',c);R.style.setProperty('--acc2',c);sw.forEach(function(o){o.classList.remove('on')});b.classList.add('on')}});
+var sw=document.querySelectorAll('#sw button');
+function pk(b,save){R.style.setProperty('--pick',b.style.getPropertyValue('--c'));sw.forEach(function(o){o.classList.remove('on')});b.classList.add('on');if(save){try{localStorage.setItem('pick',[].indexOf.call(sw,b))}catch(e){}}}
+sw.forEach(function(b){b.onclick=function(){pk(b,true)}});
+try{var pi=localStorage.getItem('pick');if(pi!==null&&sw[+pi])pk(sw[+pi],false)}catch(e){}
+var nv=document.getElementById('nav');function nh(){R.style.setProperty('--navh',nv.offsetHeight+'px')}nh();addEventListener('resize',nh);
 document.getElementById('cp').onclick=function(){var b=this;try{navigator.clipboard.writeText('lidia.bonim@hotmail.com').then(function(){b.textContent='Copiado ✓'})}catch(e){b.textContent='lidia.bonim@hotmail.com'}setTimeout(function(){b.textContent='Copiar e-mail'},2000)};
 document.querySelectorAll('.cards .card,.trio .card').forEach(function(c){c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform='perspective(700px) rotateY('+x*6+'deg) rotateX('+-y*6+'deg) translateY(-4px)'});c.addEventListener('mouseleave',function(){c.style.transform=''})});
 var cv=document.getElementById('bg'),cx=cv.getContext('2d'),ps=[],mx=-999,my=-999;

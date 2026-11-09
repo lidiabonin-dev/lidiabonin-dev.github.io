@@ -1,6 +1,7 @@
-:root{--bg:#121110;--bg2:#181614;--card:#1D1A17;--ink:#F3EEE7;--mute:#A89F94;--line:#2E2A25;--acc:#D4AE8B;--acc2:#B38E6F;
+@property --pick{syntax:"<color>";inherits:true;initial-value:#D4AE8B}
+:root{--g1:34%;--g2:22%;--g3:18%;--bg0:#121110;--bg20:#181614;--card0:#1D1A17;--line0:#2E2A25;--acc:var(--pick);--acc2:color-mix(in srgb,var(--acc) 82%,#000);--bg:color-mix(in srgb,var(--acc) 13%,var(--bg0));--bg2:color-mix(in srgb,var(--acc) 18%,var(--bg20));--card:color-mix(in srgb,var(--acc) 10%,var(--card0));--line:color-mix(in srgb,var(--acc) 22%,var(--line0));--nav:color-mix(in srgb,var(--bg) 82%,transparent);--ink:#F3EEE7;--mute:#A89F94;
 --d:'DM Serif Display',Georgia,serif;--b:'DM Sans','Segoe UI',Arial,sans-serif;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--navh,64px) + 8px);overflow-x:clip}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.75 var(--b);-webkit-font-smoothing:antialiased}
 .w{max-width:1040px;margin:0 auto;padding:0 28px}
@@ -13,7 +14,7 @@ em{font-style:italic;color:var(--acc)}
 .lead{color:var(--mute);font-size:18px;max-width:56ch;margin:0 0 16px}
 .lead strong{color:var(--ink);font-weight:500}
 .hero{display:grid;gap:64px;align-items:center;border:0;position:relative}
-.hero::before{content:"";position:absolute;right:-120px;top:0;width:520px;height:520px;background:radial-gradient(circle,rgba(212,174,139,.14),transparent 65%);pointer-events:none}
+.hero::before{content:"";position:absolute;right:-120px;top:0;width:520px;height:520px;background:radial-gradient(circle,color-mix(in srgb,var(--acc) 16%,transparent),transparent 65%);pointer-events:none}
 .cards{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin-top:40px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px}
 .cards .card{transition:border-color .3s,transform .3s}
@@ -80,8 +81,7 @@ html{scroll-behavior:auto}
 .tl .fill{height:100%!important}
 }
 
-:root{--nav:rgba(18,17,16,.78)}
-:root[data-theme=light]{--bg:#FAF6F0;--bg2:#F1EAE0;--card:#FFFFFF;--ink:#231F1B;--mute:#6B6258;--line:#E3D9CC;--acc:#9A6B43;--acc2:#B8865E;--nav:rgba(250,246,240,.8);color-scheme:light}
+:root[data-theme=light]{--g1:58%;--g2:42%;--g3:34%;--bg:color-mix(in srgb,var(--pick) 22%,var(--bg0));--bg2:color-mix(in srgb,var(--pick) 30%,var(--bg20));--card:color-mix(in srgb,var(--pick) 10%,var(--card0));--line:color-mix(in srgb,var(--pick) 38%,var(--line0));--bg0:#FAF6F0;--bg20:#F1EAE0;--card0:#FFFFFF;--line0:#E3D9CC;--ink:#231F1B;--mute:#6B6258;--pick:#B8865E;--acc:color-mix(in srgb,var(--pick) 62%,#1a1208);color-scheme:light}
 :root[data-theme=light] .contact-link.p,:root[data-theme=light] .hobby-item input:checked+label,:root[data-theme=light] .hobby-item input:checked+label small,:root[data-theme=light] .btn.p{color:#fff}
 #bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--acc);z-index:60}
 nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:calc(12px + env(safe-area-inset-top,0px)) 28px 12px;background:var(--nav);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
@@ -123,11 +123,42 @@ nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:cent
 .copy{background:none;border:1px solid var(--line);color:var(--ink);font:600 15px var(--b);padding:13px 20px;border-radius:40px;cursor:pointer;transition:.3s}
 .copy:hover{border-color:var(--acc);color:var(--acc)}
 @media(max-width:900px){.hero{grid-template-columns:1fr}.code{max-width:420px}.links{display:none}nav{padding-left:20px;padding-right:20px}}
-@media(prefers-color-scheme:light){:root:not([data-theme]){--nav:rgba(18,17,16,.78)}}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.meter b{transition:none}.caret{animation:none}}
 .ded{text-align:center;padding:120px 0;position:relative;overflow:hidden}
-.ded::before{content:"";position:absolute;left:50%;top:50%;width:620px;height:620px;translate:-50% -50%;background:radial-gradient(circle,rgba(212,174,139,.12),transparent 65%);pointer-events:none}
+.ded::before{content:"";position:absolute;left:50%;top:50%;width:620px;height:620px;translate:-50% -50%;background:radial-gradient(circle,color-mix(in srgb,var(--acc) 14%,transparent),transparent 65%);pointer-events:none}
 .ded blockquote{position:relative;margin:0 auto;max-width:760px;font:400 clamp(30px,5vw,52px)/1.2 var(--d)}
 .ded .q{display:block;font-size:90px;line-height:.6;color:var(--acc);opacity:.5;margin-bottom:12px}
 .ded blockquote small{display:block;margin:28px auto 0;max-width:54ch;font:400 17px/1.8 var(--b);color:var(--mute)}
 .ded .sig{margin:32px 0 0;font:italic 400 22px var(--d);color:var(--acc)}
+
+body,.ct,nav,.card,.code{transition:background-color .6s,border-color .6s}
+body{overflow-x:clip}
+.hero{min-height:100svh}
+.sw{flex-wrap:wrap}
+@media(max-width:900px){
+nav{flex-wrap:wrap;row-gap:4px;padding:calc(10px + env(safe-area-inset-top,0px)) 16px 8px}
+.links{display:flex;order:3;width:100%;gap:4px;padding-bottom:2px}
+.links a{padding:8px 12px;font-size:13.5px}
+#th{width:44px;height:44px}
+.hero{padding-top:calc(var(--navh,100px) + 36px)}
+}
+@media(max-width:720px){
+.hero{min-height:auto;padding-bottom:56px}
+.w{padding:0 20px}
+.lead{font-size:17px}
+.role{font-size:19px}
+.code{font-size:12.5px;max-width:100%}
+.cta .btn{flex:1 1 100%;text-align:center}
+.hobby-item{position:static}
+.pills{position:relative}
+.info-card{left:0;right:0;width:auto;max-width:none}
+.demo{flex-direction:column;align-items:flex-start}
+.stats strong{font-size:48px}
+.fora{padding-bottom:300px}
+}
+@media(hover:none){.cards .card:hover,.btn:hover,.hobby-item label:hover{transform:none}}
+
+html{transition:--pick .7s ease}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(70vmax 55vmax at 90% -5%,color-mix(in srgb,var(--pick) var(--g1),transparent),transparent 62%),radial-gradient(60vmax 50vmax at -10% 55%,color-mix(in srgb,var(--pick) var(--g2),transparent),transparent 62%),radial-gradient(50vmax 40vmax at 70% 110%,color-mix(in srgb,var(--pick) var(--g3),transparent),transparent 65%)}
+.ct{background:color-mix(in srgb,var(--bg2) 72%,transparent)}
+.sw button.on{box-shadow:0 0 0 4px color-mix(in srgb,var(--c) 30%,transparent),0 0 22px var(--c)}
